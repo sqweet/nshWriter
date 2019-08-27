@@ -2,7 +2,8 @@ package com.jwrite.tools;
 
 public class StringToChars {
     GetUserInput getUserInput = new GetUserInput();
-    final Integer DELAY = 250;
+    private static final Integer DELAY = 250;
+    Integer line = 1;
     public char[] returnChars(){
         return getUserInput.userInput.toCharArray();
     }
@@ -18,6 +19,13 @@ public class StringToChars {
                 i += 2;
             }else if(userInput[i] == ')'){
                 continue;
+            }else if(userInput[i] == '-'){
+                System.out.println("Delay " + DELAY);
+            }else if(userInput[i] == '$'){
+                System.out.println("Delay " + DELAY/2);
+            }else if(userInput[i] == '/'){
+                System.out.println("//" + line++);
+
             }else{
                 Character temp = Character.toUpperCase(userInput[i]);
                 System.out.println("KeyPress \"" + temp +"\", 1");
