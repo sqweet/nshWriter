@@ -1,5 +1,6 @@
 package com.jwrite.main;
 
+import com.jwrite.tools.IOTools;
 import com.jwrite.tools.StringToChars;
 
 public class Main {
@@ -7,5 +8,8 @@ public class Main {
         StringToChars stringToChars = new StringToChars();
         char[] chars = stringToChars.returnChars();
         stringToChars.print(chars);
+
+        IOTools ioTools = new IOTools();
+
     }
 }
